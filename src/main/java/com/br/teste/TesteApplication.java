@@ -28,6 +28,7 @@ public class TesteApplication {
 		teste.imprimirFuncionarioDeMaisIdade();
 		teste.imprimirPorOrdemAlfabetica();
 		teste.imprimeTotalDeSalarios();
+		teste.imprimeQtdSalarioMinimoPorFuncionario();
 	}
 
 }

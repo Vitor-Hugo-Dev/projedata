@@ -256,4 +256,20 @@ public class Main {
     System.out.println("SALARIO TOTAL DOS FUNCIONARIOS: " + salarioTotal);
     System.out.println("-----------------------------------------------------------------------------");
   }
+
+  public void imprimeQtdSalarioMinimoPorFuncionario() {
+    System.out.println("-----------------------------------------------------------------------------");
+    System.out.println("SALARIOS MÍNIMOS POR FUNCIONARIO.");
+    System.out.println("-----------------------------------------------------------------------------");
+
+    for (Funcionario func : funcionarios) {
+      String nome = func.getNome();
+      final BigDecimal salarioMinimo = new BigDecimal("1212.00"); 
+      BigDecimal salariosPorFunc = func.getSalario().divideToIntegralValue(salarioMinimo);
+
+      System.out.format("%15s %15s", nome, salariosPorFunc);
+      System.out.println();
+    }
+    System.out.println("-----------------------------------------------------------------------------");
+  }
 }
